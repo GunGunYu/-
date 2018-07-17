@@ -1,0 +1,29 @@
+<view class="top-bar">
+   <view  class = "top-bar-item"  wx:for="{{newsTypeList}}" bindtap='selectNewsType'  id="{{item.ab}}" data-index="{{item.index}}" data-newsID="{{item.id}}" >{{item.text}}</view>
+   </view>
+<view class="first" >
+
+<image class="background" src="{{hotPic}}"></image>
+<image class="hot-pic" src="{{hotPic}}" bindtap="redictDetail" id="{{hotID}}"></image>
+<image class="hot" src="/images/hot.png" ></image>
+<view class="info">
+<view class='headline'>{{hotTitle}}</view>
+<view class="other-info">
+<view class="source">{{hotSource}}</view>
+<view class="time">{{hotTimeR}}</view>
+</view>
+</view>
+</view>
+<scroll-view class="news-list"  scroll-y="true">
+
+<view class="news-item" wx:for="{{list}}" bindtap="redictDetail"  id="{{item.id}}">
+<view class="news-text">
+<view class= 'news-title'> {{item.title}}</view>
+<view class= 'news-time'>{{item.time}}</view>
+</view>
+<image class= 'news-pic' src='{{item.picPath}}'></image>
+
+
+</view>
+
+</scroll-view>
